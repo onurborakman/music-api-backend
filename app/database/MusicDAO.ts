@@ -10,7 +10,7 @@ export class MusicDAO
     private port:number = 3306;
     private username:string = "";
     private password:string = "";
-    private schema:string = "oe0d8prguymnrsa5";
+    private schema:string = "MUSIC";
     private pool = this.initDbConnection();
     
     /**

@@ -9,10 +9,10 @@ const { restart } = require('nodemon');
 const app = express();
 const port = process.env.PORT || 3000;
 //Database Configuration
-const dbHost = "z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+const dbHost = "localhost";
 const dbPort = 3306;
-const dbUsername = "b09h19xfesmfzami";
-const dbPassword = "ml0u47944jfp9h3u";
+const dbUsername = "root";
+const dbPassword = "root";
 //Images
 app.use(express.static('app/images'));
 app.use(bodyParser.json());
