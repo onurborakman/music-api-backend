@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -e js,ts --watch ./index.js --watch app --ignore 'lib/*' --exec 'npm run build && node ./index.js",
+    "start": "node index.js",
     "debug": "nodemon -e js,ts --watch ./index.js --watch app --ignore 'lib/*' --exec 'npm run build && node --inspect ./index.js",
     "heroku-postbuild": "npm run build",
-    "build": "babel app --out-dir lib/app --extensions \".ts,.tsx\" --source-maps inline"
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
