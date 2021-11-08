@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon -e js,ts --watch ./index.js --watch app --ignore 'lib/*' --exec 'npm run build && node ./index.js",
     "debug": "nodemon -e js,ts --watch ./index.js --watch app --ignore 'lib/*' --exec 'npm run build && node --inspect ./index.js",
+    "heroku-postbuild": "npm run build",
     "build": "babel app --out-dir lib/app --extensions \".ts,.tsx\" --source-maps inline"
   },
   "author": "",
@@ -13,7 +14,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "mysql": "^2.18.1",
-    "nodemon": "^2.0.13"
+    "nodemon": "^2.0.14",
+    "serve": "^13.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
