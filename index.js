@@ -6,7 +6,6 @@ const bodyParser = require('body-parser');
 //Create instance of an Express Application on Port 3000
 const express = require('express');
 const { restart } = require('nodemon');
-const path = require('path/posix');
 const app = express();
 const port = process.env.PORT || 3000;
 //Database Configuration
@@ -15,9 +14,7 @@ const dbPort = 3306;
 const dbUsername = "root";
 const dbPassword = "root";
 //Images
-app.use(express.static('app/images', express.static(path.join(__dirname, 'app/images'))));
-//lib
-app.use('lib', express.static(path.join(__dirname, 'lib')));
+app.use(express.static('app/images'));
 app.use(bodyParser.json());
 //Access-Control-Allow-Origin
 app.use(function(req, res, next) {
